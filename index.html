@@ -1,20 +1,16 @@
-A First Level Header
-====================
-
-A Second Level Header
----------------------
-
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
-
-The quick brown fox jumped over the lazy
-dog's back.
-
-### Header 3
-
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
+---
+2  layout: layout
+3	title: Jekyll Base
+4	---
+5	
+6	<div class="content">
+7	  <div class="related">
+8	    <ul>
+9	      {% for post in site.posts %}
+10	      <li>
+11		<span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+12	      </li>
+13	      {% endfor %}
+14	    </ul>
+15	  </div>
+16	</div>
