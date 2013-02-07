@@ -144,7 +144,7 @@ header {
         background-color: rgb(111,86,134); /* Purple */
     }
     .support header {
-        background-color: rgb(210,181,87); /* Pale Yellow */
+        background-color: rgb(213,175,60); /* Yellow */
     }
 
 /* Nav */
@@ -178,9 +178,9 @@ header {
     .about-us .onthego {
         background-color: rgba(111,86,134,0.85); /* Purple */
     }
-    /*.research .onthego {
-        background-color: rgba(210,181,87,0.85); /* Pale Yellow
-    }*/
+    .support .onthego {
+        background-color: rgba(213,175,60,0.85); /* Yellow */
+    }
 .navbar-inner {
     padding: 0;
     background: none;
