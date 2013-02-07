@@ -15,3 +15,161 @@
     </section>
   </body>
 </html>
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ginger.io - {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/base.css" rel="stylesheet">
+  <script src="/js/respond.min.js"></script>
+
+  <!-- Webfonts -->
+  {#   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,800|Crimson+Text:400italic" rel="stylesheet" type="text/css"> #}
+  <script type="text/javascript" src="https://use.typekit.com/dbs8lqk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  {% comment %}
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+  <!-- Grid production, REMOVE WHEN FINISHED -->
+  <link href="{{ STATIC_URL }}headsupgrid/hugrid.css" type="text/css" rel="stylesheet" />
+  <script src="{{ STATIC_URL }}headsupgrid/jquery-1.6.2.min.js"></script>
+  <script src="{{ STATIC_URL }}headsupgrid/hugrid.js"></script>
+  <script type="text/javascript">
+    // uncomment to show grid
+    $(document).ready(function() {
+          pageUnits = 'px';
+          colUnits = 'px';
+          pagewidth = 1170;
+          columns = 12;
+          columnwidth = 70;
+          gutterwidth = 30;
+          pagetopmargin = 50;
+          rowheight = 25;
+          makehugrid();
+          setgridonload();
+    });
+</script>
+{% endcomment %}
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18488843-4']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+
+<body class="{% block css_body_class %}{% endblock %}">
+
+<header>
+{% block header %}
+  <div id="thenav" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">MENU</a>
+        <a class="brand span4" href="{% url 'index' %}">Ginger.io</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            {#<li class="span2 active"><a href="#">Home</a></li>#}
+            <li class="span2"><a id="the-platform-link" href="{% url 'the-platform' %}"><span>The Platform</span></a></li>
+            <li class="span2"><a id="the-science-link" href="{% url 'the-science' %}"><span>The Science</span></a></li>
+            <li class="span2"><a id="data-privacy-link" href="{% url 'data-privacy' %}"><span>Data Privacy</span></a></li>
+            <li class="span2"><a id="news-and-blog-link" href="http://blog.ginger.io"><span>News &amp; Blog</span></a></li>
+            <li class="span2"><a id="about-us-link" href="{% url 'about-us' %}"><span>About Ginger.io</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <a href="http://data.ginger.io" class="pilot" target="_blank">Study Login</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</header>
+
+<div id="content">
+  <div class="container box">
+  {% block content %}{% endblock %}
+  </div>
+</div> <!-- /content -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <ul class="span2">
+        <li>Direct</li>
+        <li><a href="{% url 'in-the-press' %}">In the Press</a></li>
+        <li><a href="{% url 'join-us' %}">Join Us</a></li>
+      </ul>
+      <ul class="span2">
+        <li>Social</li>
+        <li><a href="http://twitter.com/@ginger_io" target="_blank">Twitter</a></li>
+        <li><a href="http://www.facebook.com/pages/Gingerio/216227078391733" target="_blank">Facebook</a></li>
+      </ul>
+      <ul class="span5">
+        <li>Contact</li>
+        <li><a href="http://goo.gl/maps/APV6O" target="_blank">1 Broadway, 3rd floor, Cambridge, MA 02142</a></li>
+        <li><a href="http://goo.gl/maps/5Dxi3" target="_blank">965 Mission St, Suite 720, San Francisco, CA 94103</a></li>
+      </ul>
+      <ul class="span2 offset1 hiring">
+        <li><a href="{% url 'join-us' %}">Inquire Within</a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <p class="span12"><span><a href="tel:+18554464374">1-855-GINGER-IO</a></span><a href="mailto:hello@ginger.io">hello@ginger.io</a></p>
+    </div>
+  </div>
+</footer>
+
+<!--
+Javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var headerTop = parseInt($('header').css('padding-top')) - $('#thenav').outerHeight();
+    $(window).scroll(function(){
+      var scrolled = $(window).scrollTop();
+      $('#thenav').css('background-position','0 '+(-(scrolled))+'px');
+      if (scrolled > headerTop) {
+        $('#thenav').addClass('onthego');
+      }
+      else {
+        $('#thenav').removeClass('onthego');
+      }
+    });
+  });
+</script>
+
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+<script src="{{ STATIC_URL }}js/base.js"></script>
+{% block js %}{% endblock %}
+
+</body>
+</html>
