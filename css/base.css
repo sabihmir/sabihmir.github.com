@@ -144,7 +144,7 @@ header {
         background-color: rgb(111,86,134); /* Purple */
     }
     .support header {
-        background-color: rgb(213,175,60); /* Yellow */
+        background-color: rgb(205,180,100); /* Yellow */
     }
 
 /* Nav */
@@ -179,7 +179,7 @@ header {
         background-color: rgba(111,86,134,0.85); /* Purple */
     }
     .support .onthego {
-        background-color: rgba(213,175,60,0.85); /* Yellow */
+        background-color: rgba(205,180,100,0.85); /* Yellow */
     }
 .navbar-inner {
     padding: 0;
