@@ -5,3 +5,5 @@ console.log("Hai");
 
 console.log("Hallo");
   // new
+//3rd 
+console.log("hello");
